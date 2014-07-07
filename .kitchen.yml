@@ -8,8 +8,7 @@ provisioner:
   encrypted_data_bag_secret_key_path: test/integration/encrypted_data_bag_secret
 
 platforms:
-  - name: ubuntu-12.04
-  - name: centos-6.4
+  - name: centos-6.5
 
 suites:
   - name: default
