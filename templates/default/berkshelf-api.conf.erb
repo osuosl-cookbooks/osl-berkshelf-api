@@ -1,0 +1,29 @@
+{
+  "endpoints": [
+    {
+      "type": "opscode",
+      "options": {
+        "url": "http://cookbooks.opscode.com/api/v1"
+      }
+    },
+    {
+      "type": "chef_server",
+      "options": {
+        "url": "<%= node['chef_client']['config']['chef_server_url'] %>",
+        "client_name": "<%= node['name'] %>",
+        "client_key": "/etc/chef/client.pem"
+      }
+    } <% if @keys['github'] %> <%= "," %>
+    <%= "{
+           \"type\": \"github\",
+           \"options\": {
+             \"organization\": \"#{@keys['github']['organization']}\",
+             \"access_token\": \"#{@keys['github']['token']}\",
+             \"api_endpoint\": \"https://github.com/api/v3\",
+             \"web_endpoint\": \"https://github.com\",
+             \"ssl_verify\": true
+           }
+        }" %>
+    <% end %>
+  ]
+}
