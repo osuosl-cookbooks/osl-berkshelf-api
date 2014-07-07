@@ -1,0 +1,9 @@
+{
+  "id": "keys",
+  "github": {
+    "encrypted_data": "7QnANZRJGnWRYPdEDZHmGYiAfenTMBFcwBAAOJuwDXGu9/Lpumrab1D7jPhA\nwzx6AZnes+OZLU2qo0WaL54azmAquwXhRh6zk5YylfB5Ehg=\n",
+    "iv": "QiCjyJ3p33Tl3NsDdV36CQ==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}
