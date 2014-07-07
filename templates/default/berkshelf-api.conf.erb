@@ -14,13 +14,11 @@
         "client_key": "/etc/chef/client.pem"
       }
     } <% if @keys['github'] %> <%= "," %>
-    <%= "{
-           \"type\": \"github\",
-           \"options\": {
-             \"organization\": \"#{@keys['github']['organization']}\",
-             \"access_token\": \"#{@keys['github']['token']}\"
-           }
-        }" %>
+    <% require 'json' %>
+    <% github_hash = {} %>
+    <% github_hash['type'] = 'github' %>
+    <% github_hash['options'] = { :organization => @keys['github']['organization'], :access_token => @keys['github']['token']} %>
+    <%= github_hash.to_json %>
     <% end %>
   ]
 }
