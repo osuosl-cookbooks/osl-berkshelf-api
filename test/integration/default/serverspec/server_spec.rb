@@ -5,7 +5,7 @@ include Serverspec::Helper::DetectOS
 
 describe file('/etc/berkshelf/api-server/config.json') do
   it { should be_file }
-  its(:content) { should match /github.com/ }
+  its(:content) { should match /github/ }
 end
 
 describe command('python -m json.tool /etc/berkshelf/api-server/config.json') do
