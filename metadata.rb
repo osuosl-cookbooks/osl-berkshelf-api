@@ -9,3 +9,5 @@ version          '0.1.0'
 supports         'centos'
 
 depends          'berkshelf-api-server'
+
+supports         'centos', '~> 6'
