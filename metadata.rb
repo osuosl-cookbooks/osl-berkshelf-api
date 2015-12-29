@@ -8,4 +8,4 @@ version          '0.1.0'
 
 depends          'berkshelf-api-server'
 
-supports         'centos', '~> 6'
+supports         'centos', '~> 6.0'
